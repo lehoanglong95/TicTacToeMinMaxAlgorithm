@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +14,154 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToeMinMaxAlgorithm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIe-Xw-vWJ">
+                                <rect key="frame" x="137" y="283" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1tx-a7-az5"/>
+                                    <constraint firstAttribute="width" constant="100" id="c7S-2h-LoZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <connections>
+                                    <action selector="tichSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0JN-vQ-ggN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5E-Vt-FlU">
+                                <rect key="frame" x="137" y="175" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="67v-Jo-LoL"/>
+                                    <constraint firstAttribute="width" constant="100" id="djS-Q7-K7Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <connections>
+                                    <action selector="tichSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OCi-qk-T0D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFQ-ax-Pdz">
+                                <rect key="frame" x="245" y="175" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Mh3-pt-lQq"/>
+                                    <constraint firstAttribute="width" constant="100" id="a0w-G3-Swi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <connections>
+                                    <action selector="tichSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xdW-Vp-jYF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckd-dw-ECi">
+                                <rect key="frame" x="29" y="175" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ckd-dw-ECi" secondAttribute="height" multiplier="1:1" id="Bdn-L8-YO3"/>
+                                    <constraint firstAttribute="width" constant="100" id="r9T-pV-S8N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <connections>
+                                    <action selector="tichSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KTd-1L-hoO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIl-9O-4bY">
+                                <rect key="frame" x="245" y="283" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XIl-9O-4bY" secondAttribute="height" id="cuk-K1-ZSj"/>
+                                    <constraint firstAttribute="width" constant="100" id="fLA-y5-IUV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <connections>
+                                    <action selector="tichSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E7I-5I-v57"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHO-3W-ZEz">
+                                <rect key="frame" x="29" y="283" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="t4y-YB-bQN"/>
+                                    <constraint firstAttribute="height" constant="100" id="uYg-XW-6RV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <connections>
+                                    <action selector="tichSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adZ-jX-gaG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8N-g6-mSW">
+                                <rect key="frame" x="245" y="391" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HHm-zh-Dsw"/>
+                                    <constraint firstAttribute="width" constant="100" id="WZg-8A-WoQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <connections>
+                                    <action selector="tichSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QD9-lL-jvD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uti-32-0Qr">
+                                <rect key="frame" x="137" y="391" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="STc-3B-ulu"/>
+                                    <constraint firstAttribute="height" constant="100" id="g40-zE-Bhl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <connections>
+                                    <action selector="tichSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WF3-mi-S7v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4U-f5-89R">
+                                <rect key="frame" x="149.5" y="20" width="75" height="30"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="playNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eg1-1i-1RQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRg-mi-kLg">
+                                <rect key="frame" x="29" y="391" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ksn-LW-Y1l"/>
+                                    <constraint firstAttribute="height" constant="100" id="qBJ-PI-8rh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <connections>
+                                    <action selector="tichSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lvx-V5-D1g"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="m4U-f5-89R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1C0-Ej-aEU"/>
+                            <constraint firstItem="FRg-mi-kLg" firstAttribute="top" secondItem="GHO-3W-ZEz" secondAttribute="bottom" constant="8" id="31w-cE-kOs"/>
+                            <constraint firstItem="cFQ-ax-Pdz" firstAttribute="leading" secondItem="U5E-Vt-FlU" secondAttribute="trailing" constant="8" id="3Uy-bJ-DzQ"/>
+                            <constraint firstItem="d8N-g6-mSW" firstAttribute="top" secondItem="XIl-9O-4bY" secondAttribute="bottom" constant="8" id="8pb-tf-LCp"/>
+                            <constraint firstItem="uti-32-0Qr" firstAttribute="leading" secondItem="FRg-mi-kLg" secondAttribute="trailing" constant="8" id="9yi-Ll-qlV"/>
+                            <constraint firstItem="d8N-g6-mSW" firstAttribute="leading" secondItem="uti-32-0Qr" secondAttribute="trailing" constant="8" id="BXB-0I-bEl"/>
+                            <constraint firstItem="ckd-dw-ECi" firstAttribute="top" secondItem="U5E-Vt-FlU" secondAttribute="top" id="J7b-Ht-o3P"/>
+                            <constraint firstItem="lIe-Xw-vWJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KSC-Ru-Z8x"/>
+                            <constraint firstItem="uti-32-0Qr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KfJ-fH-Zei"/>
+                            <constraint firstItem="uti-32-0Qr" firstAttribute="top" secondItem="lIe-Xw-vWJ" secondAttribute="bottom" constant="8" id="N08-Qu-GaU"/>
+                            <constraint firstItem="U5E-Vt-FlU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q6g-tU-7wL"/>
+                            <constraint firstItem="cFQ-ax-Pdz" firstAttribute="top" secondItem="U5E-Vt-FlU" secondAttribute="top" id="VjF-0Y-OyT"/>
+                            <constraint firstItem="m4U-f5-89R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wd3-ca-V2K"/>
+                            <constraint firstItem="lIe-Xw-vWJ" firstAttribute="leading" secondItem="GHO-3W-ZEz" secondAttribute="trailing" constant="8" id="aO9-tb-T3S"/>
+                            <constraint firstItem="lIe-Xw-vWJ" firstAttribute="top" secondItem="U5E-Vt-FlU" secondAttribute="bottom" constant="8" id="akO-HI-JpI"/>
+                            <constraint firstItem="XIl-9O-4bY" firstAttribute="leading" secondItem="lIe-Xw-vWJ" secondAttribute="trailing" constant="8" id="kP3-gR-qmq"/>
+                            <constraint firstItem="GHO-3W-ZEz" firstAttribute="top" secondItem="ckd-dw-ECi" secondAttribute="bottom" constant="8" id="pZE-IO-mNT"/>
+                            <constraint firstItem="lIe-Xw-vWJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qn6-8F-Jsf"/>
+                            <constraint firstItem="U5E-Vt-FlU" firstAttribute="leading" secondItem="ckd-dw-ECi" secondAttribute="trailing" constant="8" id="tEQ-gT-zW0"/>
+                            <constraint firstItem="XIl-9O-4bY" firstAttribute="top" secondItem="cFQ-ax-Pdz" secondAttribute="bottom" constant="8" id="wZR-NZ-5Ek"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tictacButton" destination="ckd-dw-ECi" id="caJ-hF-0ji"/>
+                        <outlet property="tictacButton1" destination="U5E-Vt-FlU" id="2Rb-kJ-KNI"/>
+                        <outlet property="tictacButton2" destination="cFQ-ax-Pdz" id="76i-ZC-l5d"/>
+                        <outlet property="tictacButton3" destination="GHO-3W-ZEz" id="vHq-Cb-c9i"/>
+                        <outlet property="tictacButton4" destination="lIe-Xw-vWJ" id="q37-17-LLS"/>
+                        <outlet property="tictacButton5" destination="XIl-9O-4bY" id="rzI-Wg-mDK"/>
+                        <outlet property="tictacButton6" destination="FRg-mi-kLg" id="ogR-CE-Frh"/>
+                        <outlet property="tictacButton7" destination="uti-32-0Qr" id="85b-q3-PCf"/>
+                        <outlet property="tictacButton8" destination="d8N-g6-mSW" id="tuz-GS-Wcg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
